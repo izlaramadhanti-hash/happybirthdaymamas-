@@ -1,45 +1,115 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mamas! ✨</title>
+    <style>
+        /* Desain Tema Pastel */
+        body {
+            background-color: #F7EBE8; /* Warna latar pastel pink-beige lembut */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #4A4A4A;
+        }
+
+        .card {
+            background-color: #FFFDF9; /* Warna kartu putih gading pastel */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            border: 2px solid #E8D7F1; /* Bingkai ungu pastel super tipis */
+        }
+
+        h1 {
+            color: #A8DADC; /* Biru pastel mint */
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #6C757D;
+        }
+
+        /* Tombol Interaktif */
+        .btn-buka {
+            background-color: #FFB3B3; /* Merah muda pastel */
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 179, 179, 0.4);
+            margin-top: 20px;
+        }
+
+        .btn-buka:hover {
+            background-color: #FFA0A0;
+            transform: translateY(-2px);
+        }
+
+        /* Area Surat Rahasia (Tersembunyi di awal) */
+        .wish-box {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #E8F1F5; /* Biru muda pastel transparan */
+            border-radius: 15px;
+            border-left: 5px solid #B3C5D7;
+            text-align: left;
+            animation: muncul Efek 0.8s ease forwards;
+        }
+
+        /* Efek Animasi Muncul */
+        @keyframes munculEfek {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
 <body>
 
-<div id="loading-screen">
-    <div class="loading-content">
-        <div class="loading-heart">💗</div>
-        <h2>A little surprise for Mamas...</h2>
-        <p>Preparing something special for you ✨</p>
+    <div class="card">
+        <!-- Bagian Depan -->
+        <div id="konten-depan">
+            <div style="font-size: 50px; margin-bottom: 10px;">🎂</div>
+            <h1>Happy Birthday, Mamas!</h1>
+            <p>Ada pesan kecil yang sengaja dibikin pakai coding khusus buat Mamas hari ini. Coba diklik ya!</p>
+            <button class="btn-buka" onclick="bukaSurat()">Buka Pesan ✨</button>
+        </div>
 
-        <div class="loading-bar">
-            <div class="loading-progress"></div>
+        <!-- Bagian Ucapan (Muncul setelah diklik) -->
+        <div id="kotak-wish" class="wish-box">
+            <h3 style="color: #986D8E; margin-top: 0;">Dear Mamas, ✨</h3>
+            <p style="font-size: 15px; color: #555;">
+                Selamat ulang tahun ya! Semoga di usia yang baru ini, Mamas selalu diberikan kesehatan, kebahagiaan yang melimpah, dan dilancarkan semua urusannya. 
+                <br><br>
+                Terima kasih sudah selalu jadi sosok yang luar biasa. Tetap jadi Mamas yang hebat dan ceria ya. May all your beautiful dreams come true! 💖
+            </p>
         </div>
     </div>
-</div>
 
+    <script>
+        // Logika JavaScript untuk memunculkan surat ucapan
+        function bukaSurat() {
+            // Menampilkan kotak ucapan
+            document.getElementById('kotak-wish').style.display = 'block';
+            // Menyembunyikan tombol utama agar rapi
+            document.querySelector('.btn-buka').style.display = 'none';
+        }
+    </script>
 
-<!
-<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Happy Birthday Mamas</title>
-<style>
-body{margin:0;font-family:Verdana,sans-serif;background:#ffeaf4;color:#6b2d4a}
-section{max-width:700px;margin:auto;padding:60px 24px;text-align:center}
-.card{background:white;border-radius:20px;padding:24px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
-h1,h2{color:#e75480}
-button{background:#ff7eb6;color:#fff;border:none;padding:12px 20px;border-radius:30px;font-size:16px;cursor:pointer}
-#cake{font-size:80px}
-</style></head><body><div id="loading-screen">
-    <div class="loading-content">
-        <div class="loading-heart">💗</div>
-        <h2>A little surprise for Mamas...</h2>
-        <p>Preparing something special for you ✨</p>
-        
-        <div class="loading-bar">
-            <div class="loading-progress"></div>
-        </div>
-    </div>
-</div>
-<section><div class='card'><h1>🎂 Happy Birthday, Mamas! 🎀</h1><p>A little birthday gift made with love.</p><p>⬇️ Scroll down ⬇️</p></div></section>
-<section><div class='card'><h2>💌 A Letter For You</h2><p>Happy Birthday, Mamas.<br><br>I hope this year brings you happiness, good health, and countless beautiful memories. Thank you for being you. I'm always rooting for you. 🤍</p></div></section>
-<section><div class='card'><h2>🩷 10 Things I Like About You</h2><p>✨ Your smile<br>✨ Your kindness<br>✨ Your patience<br>✨ Your laugh<br>✨ Your sincerity<br>✨ Your courage<br>✨ Your warmth<br>✨ Your support<br>✨ Your personality<br>✨ Simply... you.</p></div></section>
-<section><div class='card'><h2>🎂 Make a Wish!</h2><div id='cake'>🎂🕯️</div><button onclick='blow()'>Blow the Candle</button><p id='msg'></p></div></section>
-<section><div class='card'><h2>🎁 One Last Message</h2><p>Thank you for being born.<br>You make the world a little brighter.<br><br><b>Happy Birthday, Mamas! 💗</b><br><br>Love,<br>Izla</p></div></section>
-<script>
-function blow(){document.getElementById('cake').textContent='🎂';document.getElementById('msg').textContent='🎉 Yayy! Hope all your wishes come true! 💖';}
-</script></body></html>
+</body>
+</html>
