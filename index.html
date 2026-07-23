@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>For You 💗</title><style>
+body{margin:0;font-family:Arial;background:linear-gradient(#ffd6ea,#fff);display:flex;justify-content:center;align-items:center;height:100vh;overflow:hidden}
+.card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.1);max-width:360px;text-align:center}
+button{padding:12px 22px;border:none;border-radius:999px;background:#ff69b4;color:#fff;font-size:16px;margin:8px;cursor:pointer}
+#msg{margin-top:15px;color:#d63384}
+.heart{position:fixed;color:#ff69b4;animation:f 4s linear forwards}
+@keyframes f{to{transform:translateY(-120vh);opacity:0}}
+</style></head><body><div class="card">
+<h1>Hi, Love 💗</h1><p>I made this little website just for you.</p>
+<button onclick="letter()">Open Letter 💌</button><br>
+<button onclick="rand()">Click me! 💖</button>
+<button id="no" onmouseover="move()">No 💔</button>
+<button onclick="yes()">Yes ❤️</button>
+<div id="msg"></div></div>
+<script>
+const arr=["I'm proud of you.","Don't forget to eat!","You're my favorite person.","I love you more.","Virtual hug 🤍"];
+function letter(){msg.innerHTML="Thank you for existing. I hope today is kind to you. I love you. 💗";}
+function rand(){msg.innerHTML=arr[Math.floor(Math.random()*arr.length)]}
+function move(){let b=no;b.style.position='absolute';b.style.left=Math.random()*80+'vw';b.style.top=Math.random()*80+'vh';}
+function yes(){msg.innerHTML="YAY!! 💕";for(let i=0;i<40;i++){let h=document.createElement('div');h.className='heart';h.innerHTML='💗';h.style.left=Math.random()*100+'vw';h.style.top='100vh';h.style.fontSize=(20+Math.random()*20)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),4000);}}
+</script></body></html>
