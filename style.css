@@ -125,6 +125,95 @@ button:hover {
 
 .list {
     display: grid;
+    /* ===== LOADING SCREEN ===== */
+
+#loading-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #fff1f6, #ffe5ef, #fdf5ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: 1s ease;
+}
+
+
+.loading-content {
+    text-align: center;
+    animation: fadeUp 1.5s ease;
+}
+
+
+.loading-heart {
+    font-size: 70px;
+    animation: heartbeat 1.3s infinite;
+}
+
+
+.loading-content h2 {
+    margin-top:20px;
+    font-size:30px;
+}
+
+
+.loading-content p {
+    color:#9b7285;
+    margin-top:10px;
+}
+
+
+/* Loading bar */
+
+.loading-bar {
+    width:220px;
+    height:8px;
+    background:#f8d7e4;
+    border-radius:20px;
+    margin:30px auto;
+    overflow:hidden;
+}
+
+
+.loading-progress {
+    height:100%;
+    width:0%;
+    background:#eaa7c1;
+    border-radius:20px;
+    animation: loading 3s forwards;
+}
+
+
+@keyframes loading {
+
+    from{
+        width:0%;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    50%{
+        transform:scale(1.2);
+    }
+
+}
+
+
+/* hide */
+
+#loading-screen.hide {
+
+    opacity:0;
+    pointer-events:none;
+
+}
     gap: 15px;
     width:100%;
 }
