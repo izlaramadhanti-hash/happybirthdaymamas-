@@ -1,4 +1,16 @@
+// ===== LOADING SCREEN =====
 
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        document
+        .getElementById("loading-screen")
+        .classList.add("hide");
+
+    },3200);
+
+});
 // ===== MAMAS BIRTHDAY INTERACTION =====
 
 
