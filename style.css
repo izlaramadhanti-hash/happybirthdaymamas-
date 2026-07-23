@@ -1,1 +1,136 @@
+/* ===== MAMAS BIRTHDAY WEBSITE STYLE ===== */
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec, #fdf6ff);
+    color: #6b4b5c;
+    overflow-x: hidden;
+}
+
+
+/* Section */
+
+section {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* Title */
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d77fa1;
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+p {
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+/* Card */
+
+.card {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 35px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 15px 35px rgba(215,127,161,0.15);
+    animation: fadeUp 1s ease;
+}
+
+
+/* Opening */
+
+.hero {
+    text-align: center;
+}
+
+.hero span {
+    color: #e89bb5;
+}
+
+.subtitle {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+
+/* Button */
+
+button {
+    margin-top: 25px;
+    border: none;
+    background: #eaa7c1;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+    font-family: inherit;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #d982a6;
+}
+
+
+/* Letter */
+
+.letter {
+    background: #fff8fb;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: inset 0 0 20px #f9d8e5;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: .8s;
+}
+
+.letter.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* Favorite Things */
+
+.list {
+    display: grid;
+    gap: 15px;
+    width:100%;
+}
+
+.item {
+    background: #fff;
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.05
